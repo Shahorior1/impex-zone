@@ -39,6 +39,139 @@
     <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
     <!-- Theme Custom CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
+    
+    <!-- Custom Hero Banner CSS -->
+    <style>
+        /* Hero Banner Section */
+        .hero-banner {
+            background: linear-gradient(135deg, #dc3545 0%, #ffc107 100%);
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+            color: white;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 40% 60%, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px, 80px 80px, 60px 60px;
+        }
+        
+        .hero-banner .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-text h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero-text p {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: white;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .hero-airplane {
+            position: relative;
+            font-size: 60px;
+            color: rgba(255,255,255,0.8);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .hero-airplane::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            width: 200px;
+            height: 2px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            transform: translateY(-50%);
+            animation: dash 2s linear infinite;
+        }
+        
+        .hero-btn {
+            font-family: 'Inter', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(255,255,255,0.15);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.25);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero-btn:hover {
+            background: rgba(255,255,255,0.25);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: rgba(255,255,255,0.4);
+        }
+        
+        .hero-btn i {
+            margin-right: 10px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes dash {
+            0% { opacity: 0; transform: translateX(-50px) translateY(-50%); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateX(50px) translateY(-50%); }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            
+            .hero-airplane {
+                margin-top: 30px;
+                font-size: 40px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -140,7 +273,7 @@
                                 <li><a href="service.html">Services</a></li>
                                     <li class="dropdown"><a href="#">Pages</a>
                                         <div class="dropdown-btn"><i class="fa fa-angle-down"></i></div></li>
-                                    <li class="dropdown"><a href="projects.html">Products</a>
+                                    <li class="dropdown"><a href="products.html">Products</a>
                                         <div class="dropdown-btn"><i class="fa fa-angle-down"></i></div></li>
                                     <li><a href="blog-grid.html">Blog</a></li>
                                     <li><a href="contact.html">Contact</a></li>
@@ -253,8 +386,31 @@
         <!-- ========================================== -->
         <!-- End Main Header Section -->
         <!-- ========================================== -->
-    
-    
+
+        <!-- ========================================== -->
+        <!-- Start Hero Banner Section -->
+        <!-- ========================================== -->
+        <section class="hero-banner">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>The Best Import and Export <br>Services since 2020</h1>
+                        <p>Connecting global markets with reliable, efficient, and professional trading solutions worldwide.</p>
+                        <a href="contact.html" class="hero-btn">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Get A Quote
+                        </a>
+                    </div>
+                    <div class="hero-airplane">
+                        <i class="fa-solid fa-plane"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- End Hero Banner Section -->
+        <!-- ========================================== -->
+
         <!-- Start Breadcrumb Section -->
         <!-- ========================================== -->
         <section class="page-title">
@@ -296,7 +452,7 @@
                                         <img class="client" src="assets/images/about/client-3.jpg" alt="">
                                         <div class="client others"><span class="plus">+</span></div>
                                     </div>
-                                    <div class="title"><span>5K+</span> Trasted Clients</div>
+                                    <div class="title"><span>5K+</span> Trading Partners</div>
                                 </div>
                             </div>
                             <div class="right">
@@ -307,7 +463,7 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" width="250.5" height="250.5" viewBox="0 0 250.5 250.5">
                                                 <path d="M.25,125.25a125,125,0,1,1,125,125,125,125,0,0,1-125-125" id="e-path-35ee1b2"></path>
                                                 <text>
-                                                    <textPath id="e-text-path-35ee1b2" href="#e-path-35ee1b2" startOffset="0%">* lOGISTICS  *  TRANSPORTATION  *  SHIPPING  *  CONTRIBUTING</textPath>
+                                                    <textPath id="e-text-path-35ee1b2" href="#e-path-35ee1b2" startOffset="0%">* IMPORT  *  EXPORT  *  TRADING  *  GLOBAL COMMERCE</textPath>
                                                 </text>
                                             </svg>
                                         </div>
@@ -323,22 +479,21 @@
                         <div class="inner-column">
                             <div class="sec-title">
                                 <span class="sub-title">ABOUT COMPANY</span>
-                                <h2>Trusted Experiences <br> Since <span class="color1">2007.</span></h2>
-                                <div class="text">Dramatically incubate high-payoff niches and granular catalysts for change.
-                                    quickly e-enable extensive alignments before out logistics.</div>
+                                <h2>Trusted Import & Export <br> Since <span class="color1">2020.</span></h2>
+                                <div class="text">We specialize in comprehensive import and export solutions, connecting global markets with reliable, efficient, and professional trading services worldwide.</div>
                             </div>
                             <div class="row">
                                 <div class="about-block two mb-sm-0 col-6">
                                     <div class="inner-box d-sm-flex align-items-sm-center">
                                         <div class="icon mr-20"><img src="assets/images/about/1.png" alt=""></div>
-                                        <h5 class="title mt-3 mt-sm-0 my-0">Ontime Delivery <br> Gaurentee</h5>
+                                        <h5 class="title mt-3 mt-sm-0 my-0">Global Trade <br> Excellence</h5>
                                     </div>
                                 </div>
     
                                 <div class="about-block two col-6">
                                     <div class="inner-box d-sm-flex align-items-sm-center">
                                         <div class="icon mr-20"><img src="assets/images/about/2.png" alt=""></div>
-                                        <h5 class="title mt-3 mt-sm-0 my-0">Optimize Travell <br> Cost System</h5>
+                                        <h5 class="title mt-3 mt-sm-0 my-0">Competitive <br> Trading Rates</h5>
                                     </div>
                                 </div>
                             </div>
@@ -412,12 +567,12 @@
                     <div class="content-column col-lg-6 wow fadeInLeft">
                         <div class="inner-column">
                             <div class="sec-title light">
-                                <span class="sub-title">ACHIVEMENTS</span>
-                                <h2>Our Best Achivement</h2>
+                                <span class="sub-title">ACHIEVEMENTS</span>
+                                <h2>Our Import & Export Excellence</h2>
                             </div>
                             <ul class="list-style-2 mb-60 lg-mb-40">
-                                <li><i class="fa-solid fa-check"></i> Conveniently communicate high members </li>
-                                <li><i class="fa-solid fa-check"></i> Rapidiously synergize collaborat</li>
+                                <li><i class="fa-solid fa-check"></i> Global trading partnerships across 50+ countries</li>
+                                <li><i class="fa-solid fa-check"></i> Seamless import and export documentation</li>
                             </ul>
                         </div>
                     </div>
@@ -446,7 +601,7 @@
                                     <span class="odometer"></span>
                                     <span class="suffix">K+</span>
                                 </h3>
-                                <p class="title">Total Works Completed</p>
+                                <p class="title">Successful Trade Deals</p>
                             </div>
                             <div class="top-right__shape"></div>
                         </div>
@@ -461,7 +616,7 @@
                                     <span class="odometer"></span>
                                     <span class="suffix">K+</span>
                                 </h3>
-                                <p class="title">Worldwide clients trust us</p>
+                                <p class="title">Global Trading Partners</p>
                             </div>
                             <div class="top-right__shape"></div>
                         </div>
@@ -479,8 +634,8 @@
             <div class="dotted-map"></div>
             <div class="container">
                 <div class="sec-title text-center">
-                    <span class="sub-title">Working Process</span>
-                    <h2>Attain your Shipment Smoothly <br> with 3 easy Steps</h2>
+                    <span class="sub-title">Trading Process</span>
+                    <h2>Complete your Import & Export <br> with 3 easy Steps</h2>
                 </div>
                 <div class="row gy-30">
 
@@ -492,8 +647,8 @@
                             </div>
                             <div class="info-box">
                                 <div class="inner">
-                                    <h4 class="title">Products Details</h4>
-                                    <div class="text">Conveniently communicate highly team markets without enabled</div>
+                                    <h4 class="title">Product Inquiry</h4>
+                                    <div class="text">Share your import/export requirements and product specifications with our expert team</div>
                                 </div>
                             </div>
                         </div>
@@ -506,8 +661,8 @@
                             </div>
                             <div class="info-box">
                                 <div class="inner">
-                                    <h4 class="title">Submit Documents</h4>
-                                    <div class="text">Conveniently communicate highly team markets without enabled</div>
+                                    <h4 class="title">Documentation</h4>
+                                    <div class="text">We handle all customs paperwork, licenses, and compliance requirements for smooth processing</div>
                                 </div>
                             </div>
                         </div>
@@ -520,8 +675,8 @@
                             </div>
                             <div class="info-box">
                                 <div class="inner">
-                                    <h4 class="title">Ready to Send</h4>
-                                    <div class="text">Conveniently communicate highly team markets without enabled</div>
+                                    <h4 class="title">Global Delivery</h4>
+                                    <div class="text">Secure transportation and timely delivery to your destination worldwide with full tracking</div>
                                 </div>
                             </div>
                         </div>
@@ -539,10 +694,10 @@
         <div class="marquee-section style-2">
             <div class="marquee">
                 <ul class="marquee-group marquee_mode">
-                    <li class="text">*&nbsp;&nbsp;Logistic</li>
-                    <li class="text active">*&nbsp;&nbsp;Transportation</li>
-                    <li class="text">*&nbsp;&nbsp;shipping</li>
-                    <li class="text active">*&nbsp;&nbsp;Transportation</li>
+                    <li class="text">*&nbsp;&nbsp;Import</li>
+                    <li class="text active">*&nbsp;&nbsp;Export</li>
+                    <li class="text">*&nbsp;&nbsp;Trading</li>
+                    <li class="text active">*&nbsp;&nbsp;Commerce</li>
                 </ul>
             </div>
         </div>
@@ -559,7 +714,7 @@
                     <div class="col-lg-7">
                         <div class="sec-title two">
                             <span class="sub-title">Meet Our Team</span>
-                            <h2>We’ve <span class="color1">25+</span> Expert and <br> Talented Members</h2>
+                            <h2>We've <span class="color1">25+</span> Import & Export <br> Specialists</h2>
                         </div>
                     </div>
                     <div class="col-lg-5 team-button">
@@ -733,7 +888,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-9 col-lg-8 col-md-8">
                         <div class="cta__content">
-                            <h3 class="cta-title">The Best Transportation <br> Services since 2007</h3>
+                            <h3 class="cta-title">The Best Import and Export <br> Services since 2020</h3>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-4">

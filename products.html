@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>Our Products - impex-zone</title>
+    <meta content="impex-zone - Import and Export Products and Services" name="description">
+    <meta content="impex-zone, import, export, products, trading, commodities, FMCG" name="keywords">
+    <meta content="INDEX,FOLLOW" name="robots">
+
+    <!-- Mobile Specific Metas -->
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link href="assets/images/favicons/favicon.png" rel="icon" sizes="32x32" type="image/png">
+    <meta content="#ffffff" name="msapplication-TileColor">
+    
+    <meta content="#ffffff" name="theme-color">
+
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link href="https://fonts.googleapis.com/" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/css/fancybox.min.css" rel="stylesheet">
+    <link href="assets/css/owl.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/odometer.min.css" rel="stylesheet">
+    <link href="assets/css/select2.min.css" rel="stylesheet">
+    <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
+    <!-- Theme Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Left Arrow Button CSS -->
+    <link href="assets/css/left-arrow.css" rel="stylesheet">
+    
+    <!-- Custom Products Page CSS -->
+    <style>
+        .products-section {
+            background-color: #f8f9fa;
+        }
+        .product-block {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .product-block:hover {
+            transform: translateY(-5px);
+        }
+        .product-block .inner-box {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-block .icon-box {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: #fff;
+            font-size: 32px;
+        }
+        .product-block .title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .product-block .text {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .product-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .product-features li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+        .product-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .breadcrumb-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/background/breadcrumb.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+        }
+        .breadcrumb-section h1 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        .breadcrumb-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .breadcrumb-nav li {
+            margin-right: 10px;
+        }
+        .breadcrumb-nav li a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .breadcrumb-nav li a:hover {
+            color: white;
+        }
+        .breadcrumb-nav li:after {
+            content: "/";
+            margin-left: 10px;
+            color: #ccc;
+        }
+        .breadcrumb-nav li:last-child:after {
+            display: none;
+        }
+        .breadcrumb-nav li:last-child {
+            color: white;
+        }
+        
+        /* Hero Banner Section */
+        .hero-banner {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+            color: white;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 40% 60%, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px, 80px 80px, 60px 60px;
+        }
+        
+        .hero-banner .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-text h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero-text p {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: white;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .hero-airplane {
+            position: relative;
+            font-size: 60px;
+            color: rgba(255,255,255,0.8);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .hero-airplane::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            width: 200px;
+            height: 2px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            transform: translateY(-50%);
+            animation: dash 2s linear infinite;
+        }
+        
+        .hero-btn {
+            font-family: 'Inter', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(255,255,255,0.15);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.25);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero-btn:hover {
+            background: rgba(255,255,255,0.25);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: rgba(255,255,255,0.4);
+        }
+        
+        .hero-btn i {
+            margin-right: 10px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes dash {
+            0% { opacity: 0; transform: translateX(-50px) translateY(-50%); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateX(50px) translateY(-50%); }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            
+            .hero-airplane {
+                margin-top: 30px;
+                font-size: 40px;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="body-wrapper">
+
+    <!--============================
+        Code Start From Here
+    ================================-->
+
+
+    <div class="page-wrapper">
+
+        <!--========= Start Prealoader ==============-->
+        <div class="loading-screen" id="loading-screen">
+            <div class="preloader-close">x</div>
+            <span class="bar top-bar"></span>
+            <span class="bar down-bar"></span>
+            <div class="animation-preloader">
+                <div class="spinner"><span class="loading-counter"> </span></div>
+                <div class="txt-loading">
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                    <span data-text-preloader="M" class="letters-loading">
+                        M
+                    </span>
+                    <span data-text-preloader="P" class="letters-loading">
+                        P
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="X" class="letters-loading">
+                        X
+                    </span>
+                    <span data-text-preloader="-" class="letters-loading">
+                        -
+                    </span>
+                    <span data-text-preloader="Z" class="letters-loading">
+                        Z
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+                    <span data-text-preloader="N" class="letters-loading">
+                        N
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--========= End Prealoader ==============-->
+
+        <!-- ========================================== -->
+        <!-- Start Main Header Section -->
+        <!-- ========================================== -->
+        <header class="main-header style-1">
+    
+            <div class="header-top">
+                <div class="inner-container">
+                    <div class="top-left">
+    
+                        <ul class="list-style-1">
+                            <li>Call Us : <a href="tel:+8801621101508"><i class="icon fa-solid fa-phone"></i>+880 1621-101508</a></li>
+                            <li>Email us : <a href="mailto:support@impex-zone.com"><i class="icon fa-regular fa-envelope-open"></i>support@impex-zone.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="outer-box">
+                        <ul class="social-icon-one">
+                            <li><span class="menu-follow_title">Follow Us :</span></li>
+                            <li><a href="#"><span class="fa-brands fa-facebook-f"></span></a></li>
+                            <li><a href="#"><span class="fa-brands fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa-brands fa-linkedin-in"></span></a></li>
+                            <li><a href="#"><span class="fa-brands fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-lower">
+    
+                <div class="main-box">
+                    <div class="logo-box">
+                        <div class="logo"><a href="index.html">
+                            <img src="assets/images/logo/logo.png" alt="" title="impex-zone">
+                            <img src="assets/images/logo/logo.png" alt="" title="impex-zone">
+                        </a></div>
+                    </div>
+    
+                    <div class="nav-outer">
+                        <nav class="nav main-menu">
+                            <ul class="navigation menu-anim">
+                                <li class="dropdown"><a href="index.html">Home</a>
+                                    <div class="dropdown-btn"><i class="fa fa-angle-down"></i></div></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li class="dropdown"><a href="#">Pages</a>
+                                    <div class="dropdown-btn"><i class="fa fa-angle-down"></i></div></li>
+                                <li class="dropdown current"><a href="products.html">Products</a>
+                                    <div class="dropdown-btn"><i class="fa fa-angle-down"></i></div></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+    
+                        <div class="outer-box">
+                            <a href="tel:+8801621101508" class="info-btn">
+                                <i class="icon fa-solid fa-phone"></i>
+                                <small>Call us anytime</small><br> +880 1621-101508
+                            </a>
+                            <div class="ui-btn-outer">
+                                <button class="ui-btn ui-btn search-btn">
+                                    <span class="icon fa-solid fa-magnifying-glass"></span>
+                                </button>
+                            </div>
+                            
+    
+                            <div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--Mobile Menu-->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <nav class="menu-box">
+                    <div class="upper-box">
+                        <div class="nav-logo"><a href="index.html"><img src="assets/images/logo/logo.png" alt="" title=""></a></div>
+                        <div class="close-btn"><i class="icon fa fa-times"></i></div>
+                    </div>
+                    <ul class="navigation clearfix">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </ul>
+                    <ul class="contact-list-one">
+                        <li>
+    
+                            <div class="contact-info-box">
+                                <span class="icon fa-solid fa-phone"></span>
+                                <span class="title">Call Us Anytime</span>
+                                <a href="tel:+8801621101508">+880 1621-101508</a>
+                            </div>
+                        </li>
+                        <li>
+    
+                            <div class="contact-info-box">
+                                <span class="icon fa-regular fa-envelope"></span>
+                                <span class="title">Email Us</span>
+                                <a href="mailto:support@impex-zone.com">support@impex-zone.com</a>
+                            </div>
+                        </li>
+                        <li>
+    
+                            <div class="contact-info-box">
+                                <span class="icon fa-regular fa-clock"></span>
+                                <span class="title">Opening Hour</span>
+                                Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+    
+            <!-- Header Search -->
+            <div class="search-popup">
+                <button class="close-search"><i class="fa-sharp fa-solid fa-x"></i></button>
+                <form method="post" action="blog-list.html">
+                    <div class="form-group">
+                        <input id="search" type="search" name="search" placeholder="Search..." required="">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+            <!-- End Header Search -->
+    
+    
+            <div class="sticky-header">
+                <div class="container">
+                    <div class="inner-container">
+    
+                        <div class="logo">
+                            <a href="index.html" title="">
+                                <img src="assets/images/logo/logo3.png" alt="" title="">
+                                <img src="assets/images/logo/logo.png" alt="" title="impex-zone">
+                            </a>
+                        </div>
+    
+                        <div class="nav-outer">
+    
+                            <nav class="main-menu">
+                                <div class="navbar-collapse show collapse clearfix">
+                                    <ul class="navigation menu-anim clearfix">
+                                        <!--Keep This Empty / Menu will come through Javascript-->
+                                    </ul>
+                                </div>
+                            </nav>
+    
+                            <div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars"></span></div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+        </header>
+        <!-- ========================================== -->
+        <!-- End Main Header Section -->
+        <!-- ========================================== -->
+
+        <!-- ========================================== -->
+        <!-- Start Hero Banner Section -->
+        <!-- ========================================== -->
+        <section class="hero-banner">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>The Best Import & Export <br>Services since 2020</h1>
+                        <p>Connecting global markets with reliable, efficient, and professional trading solutions worldwide.</p>
+                        <a href="contact.html" class="hero-btn">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Get A Quote
+                        </a>
+                    </div>
+                    <div class="hero-airplane">
+                        <i class="fa-solid fa-plane"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- End Hero Banner Section -->
+        <!-- ========================================== -->
+
+        <!-- ========================================== -->
+        <!-- Start Breadcrumb Section -->
+        <!-- ========================================== -->
+        <section class="breadcrumb-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Our Products</h1>
+                        <ul class="breadcrumb-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Products</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- End Breadcrumb Section -->
+        <!-- ========================================== -->
+
+        <!-- Start Products Section -->
+        <!-- ========================================== -->
+        <section class="products-section space">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <span class="sub-title">OUR PRODUCTS</span>
+                    <h2>Comprehensive Product Categories We Handle</h2>
+                    <p>We specialize in import and export of diverse product categories, ensuring quality and reliability in every transaction. Our extensive network and expertise enable us to handle various commodities across multiple industries.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-block">
+                            <div class="inner-box">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-boxes-stacked"></i>
+                                </div>
+                                <h4 class="title">General Trading Products</h4>
+                                <div class="text">Comprehensive trading solutions for a wide range of general merchandise and consumer goods across international markets.</div>
+                                <ul class="product-features">
+                                    <li>Consumer Electronics</li>
+                                    <li>Home Appliances</li>
+                                    <li>Textiles & Garments</li>
+                                    <li>Furniture & Decor</li>
+                                    <li>Sports Equipment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-block">
+                            <div class="inner-box">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+                                <h4 class="title">Agro Commodities</h4>
+                                <div class="text">Agricultural products, grains, and farming commodities for domestic and international markets with quality assurance.</div>
+                                <ul class="product-features">
+                                    <li>Rice & Wheat</li>
+                                    <li>Pulses & Lentils</li>
+                                    <li>Spices & Herbs</li>
+                                    <li>Fresh Fruits & Vegetables</li>
+                                    <li>Organic Products</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-block">
+                            <div class="inner-box">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                </div>
+                                <h4 class="title">FMCG Exporters</h4>
+                                <div class="text">Fast-Moving Consumer Goods export services for retail and wholesale distribution with efficient supply chain management.</div>
+                                <ul class="product-features">
+                                    <li>Food & Beverages</li>
+                                    <li>Personal Care Products</li>
+                                    <li>Household Items</li>
+                                    <li>Health & Wellness</li>
+                                    <li>Baby Care Products</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-block">
+                            <div class="inner-box">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-gear"></i>
+                                </div>
+                                <h4 class="title">Machinery And Vehicle</h4>
+                                <div class="text">Industrial machinery, equipment, and vehicle import/export services worldwide with technical support and warranties.</div>
+                                <ul class="product-features">
+                                    <li>Construction Equipment</li>
+                                    <li>Agricultural Machinery</li>
+                                    <li>Commercial Vehicles</li>
+                                    <li>Manufacturing Equipment</li>
+                                    <li>Power Generation Units</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-block">
+                            <div class="inner-box">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-hammer"></i>
+                                </div>
+                                <h4 class="title">Metal & Alloys</h4>
+                                <div class="text">Steel, aluminum, copper, and various metal alloys for construction and manufacturing industries with quality certification.</div>
+                                <ul class="product-features">
+                                    <li>Steel Products</li>
+                                    <li>Aluminum Sheets & Bars</li>
+                                    <li>Copper Wire & Pipes</li>
+                                    <li>Stainless Steel</li>
+                                    <li>Industrial Alloys</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-block">
+                            <div class="inner-box">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                                <h4 class="title">And Other Items</h4>
+                                <div class="text">Custom import/export solutions for specialized products and unique business requirements with personalized service.</div>
+                                <ul class="product-features">
+                                    <li>Chemicals & Pharmaceuticals</li>
+                                    <li>Raw Materials</li>
+                                    <li>Specialty Items</li>
+                                    <li>Custom Orders</li>
+                                    <li>Bulk Commodities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- End Products Section -->
+
+        <!-- ========================================== -->
+        <!-- Start CTA Section -->
+        <!-- ========================================== -->
+        <section class="cta-section space-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-9 col-lg-8 col-md-8">
+                        <div class="cta_content">
+                            <h2 class="cta__title">Ready to Start Trading? <br> Get Your Custom Quote Today!</h2>
+                            <div class="cta__text">Connect with our experts to discuss your import/export requirements and get personalized solutions for your business needs.</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4">
+                        <div class="cta_button text-right">
+                            <div class="cta__btn">
+                                <a href="contact.html" class="theme-btn btn-style-2"><i class="icon fa-solid fa-arrow-right"></i><span class="btn-title">Get A Quote</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- End CTA Section -->
+
+        <!-- ========================================== -->
+        <!-- Start Main Footer Section -->
+        <!-- ========================================== -->
+        <footer class="main-footer pull-up">
+            <div class="widgets-section space space-bottom-minimize-40">
+                <div class="bg bg-image" style="background-image: url(assets/images/background/footer-bg.jpg)"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-column col-xl-3 col-lg-3 col-md-6">
+                            <div class="footer-widget about-widget">
+                                <div class="logo"><a href="index.html"><img src="assets/images/logo/logo2.png" alt></a></div>
+                                <div class="contact-info-desc">
+                                    <p class="text">Conveniently communicate highly to <br> markets without enabled</p>
+                                </div>
+                                <ul class="contact-info-list">
+                                    <li><a href="tel:+8801621101508"><i class="fas fa-phone"></i> +880 1621-101508</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-location-arrow"></i> 102/B New Straight Rd, Bongkim <br> <span>California, USA</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="footer-column col-xl-3 col-lg-3 col-md-6">
+                            <div class="footer-widget links-widget">
+                                <h5 class="widget-title">Our Navigation</h5>
+                                <div class="widget-bar"></div>
+                                <div class="widget-content">
+                                    <ul class="user-links two-column">
+                                        <li><a href="about.html">About impex-zone</a></li>
+                                        <li><a href="team.html">Meet the Team</a></li>
+                                        <li><a href="products.html">Our Products</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="footer-column col-xl-3 col-lg-3 col-md-6">
+                            <div class="footer-widget gallery-widget">
+                                <h5 class="widget-title">Gallery</h5>
+                                <div class="widget-bar"></div>
+                                <div class="widget-content">
+                                    <div class="outer clearfix">
+                                        <div class="recent-post-item">
+                                            <figure class="image">
+                                                <a href="#"><img src="assets/images/footer/galary-2.jpg" alt=""></a>
+                                            </figure>
+                                            <div class="recent-post-info">
+                                                <h4 class="title"><a href="#">We ensure you the best Quality Services</a></h4>
+                                                <span class="post-date">Jan 21, 2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="footer-column col-xl-3 col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <!-- <div class="widget-bar"></div> -->
+                                <div class="widget-content">
+                                    <div class="subscribe-form">
+                                        
+                                        <ul class="social-icon-one">
+                                            <li><a href="#"><span class="fa-brands fa-square-facebook"></span></a></li>
+                                            <li><a href="#"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="#"><span class="fa-brands fa-linkedin-in"></span></a></li>
+                                            <li><a href="#"><span class="fa-brands fa-pinterest-p"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="inner-container">
+                        <div class="copyright-text">©2024 - All Rights Reserved 
+                                <a href="https://themeforest.net/user/theme-vally">Impex-Zone</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ========================================== -->
+        <!-- End Main Footer Section -->
+        <!-- ========================================== -->
+
+
+    </div><!-- End Page Wrapper -->
+    
+
+    <!--============================
+            Code End  Here
+    ================================-->
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" height="100%" viewBox="-1 -1 102 102" width="100%">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+    
+    <!-- Left Arrow Button -->
+    <div class="left-arrow-btn" id="leftArrowBtn">
+        <div class="arrow-icon"></div>
+    </div>
+    
+    <!-- Right Up Arrow Button -->
+    <div class="right-up-arrow-btn" id="rightUpArrowBtn">
+        <div class="up-arrow-icon"></div>
+    </div>
+    
+
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+
+    <script src="assets/js/owl.min.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/marquee.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+    <!-- Left Arrow Button JS -->
+    <script src="assets/js/left-arrow.js"></script>
+
+</body>
+
+
+</html>

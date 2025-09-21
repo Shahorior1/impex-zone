@@ -39,6 +39,139 @@
     <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
     <!-- Theme Custom CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
+    
+    <!-- Custom Hero Banner CSS -->
+    <style>
+        /* Hero Banner Section */
+        .hero-banner {
+            background: linear-gradient(135deg, #dc3545 0%, #ffc107 100%);
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+            color: white;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 40% 60%, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px, 80px 80px, 60px 60px;
+        }
+        
+        .hero-banner .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-text h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero-text p {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: white;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .hero-airplane {
+            position: relative;
+            font-size: 60px;
+            color: rgba(255,255,255,0.8);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .hero-airplane::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            width: 200px;
+            height: 2px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            transform: translateY(-50%);
+            animation: dash 2s linear infinite;
+        }
+        
+        .hero-btn {
+            font-family: 'Inter', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(255,255,255,0.15);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.25);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero-btn:hover {
+            background: rgba(255,255,255,0.25);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: rgba(255,255,255,0.4);
+        }
+        
+        .hero-btn i {
+            margin-right: 10px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes dash {
+            0% { opacity: 0; transform: translateX(-50px) translateY(-50%); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateX(50px) translateY(-50%); }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            
+            .hero-airplane {
+                margin-top: 30px;
+                font-size: 40px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -140,7 +273,7 @@
                                     <li class="current"><a href="service.html">Services</a></li>
                                     <li class="dropdown"><a href="#">Pages</a>
                                         <div class="dropdown-btn"><i class="fa fa-angle-down"></i></div></li>
-                                    <li class="dropdown"><a href="projects.html">Products</a>
+                                    <li class="dropdown"><a href="products.html">Products</a>
                                         <div class="dropdown-btn"><i class="fa fa-angle-down"></i></div></li>
                                     <li><a href="blog-grid.html">Blog</a></li>
                                     <li><a href="contact.html">Contact</a></li>
@@ -253,8 +386,31 @@
         <!-- ========================================== -->
         <!-- End Main Header Section -->
         <!-- ========================================== -->
-    
-    
+
+        <!-- ========================================== -->
+        <!-- Start Hero Banner Section -->
+        <!-- ========================================== -->
+        <section class="hero-banner">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>The Best Import and Export <br>Services since 2020</h1>
+                        <p>Connecting global markets with reliable, efficient, and professional trading solutions worldwide.</p>
+                        <a href="contact.html" class="hero-btn">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Get A Quote
+                        </a>
+                    </div>
+                    <div class="hero-airplane">
+                        <i class="fa-solid fa-plane"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- End Hero Banner Section -->
+        <!-- ========================================== -->
+
         <!-- Start Breadcrumb Section -->
         <!-- ========================================== -->
         <section class="page-title">
