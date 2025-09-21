@@ -171,6 +171,228 @@
                 font-size: 40px;
             }
         }
+        
+        /* Custom Get A Quote Button Styling */
+        .view-more {
+            display: inline-flex !important;
+            align-items: center !important;
+            padding: 12px 25px !important;
+            background: linear-gradient(135deg, #c91d25 0%, #f7c600 100%) !important;
+            color: white !important;
+            text-decoration: none !important;
+            border-radius: 25px !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 15px rgba(201, 29, 37, 0.3) !important;
+            border: none !important;
+        }
+        
+        .view-more:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 25px rgba(201, 29, 37, 0.4) !important;
+            color: white !important;
+        }
+        
+        .view-more .btn-title {
+            color: white !important;
+            margin-right: 8px !important;
+        }
+        
+        .view-more i {
+            color: white !important;
+            font-size: 12px !important;
+        }
+        
+        /* Supplier Section Styling */
+        .supplier-section {
+            background-color: #f8f9fa;
+            position: relative;
+        }
+        
+        .supplier-content .sec-title {
+            margin-bottom: 40px;
+        }
+        
+        .supplier-features {
+            margin-top: 30px;
+        }
+        
+        .supplier-features .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .supplier-features .feature-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        
+        .supplier-features .feature-item .icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #c91d25 0%, #f7c600 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .supplier-features .feature-item .icon i {
+            color: white;
+            font-size: 24px;
+        }
+        
+        .supplier-features .feature-item .content h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .supplier-features .feature-item .content p {
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        .supplier-form-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .supplier-form-header {
+            background: linear-gradient(135deg, #c91d25 0%, #f7c600 100%);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .supplier-form-header h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .supplier-form-header p {
+            margin: 0;
+            opacity: 0.9;
+            color: white;
+        }
+        
+        .supplier-form {
+            padding: 40px;
+        }
+        
+        .supplier-form .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .supplier-form .form-row .form-group {
+            flex: 1;
+        }
+        
+        .supplier-form .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .supplier-form .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .supplier-form .form-group input,
+        .supplier-form .form-group select,
+        .supplier-form .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+        }
+        
+        .supplier-form .form-group input:focus,
+        .supplier-form .form-group select:focus,
+        .supplier-form .form-group textarea:focus {
+            outline: none;
+            border-color: #c91d25;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(201, 29, 37, 0.1);
+        }
+        
+        .supplier-form .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .supplier-submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #c91d25 0%, #f7c600 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .supplier-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 29, 37, 0.3);
+        }
+        
+        .supplier-submit-btn i {
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .supplier-form .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .supplier-form {
+                padding: 25px;
+            }
+            
+            .supplier-form-header {
+                padding: 25px;
+            }
+            
+            .supplier-features .feature-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .supplier-features .feature-item .icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
     </style>
 
 </head>
@@ -271,11 +493,8 @@
                                         <div class="dropdown-btn"><i class="fa fa-angle-down"></i></div></li>
                                     <li><a href="about.html">About</a></li>
                                     <li class="current"><a href="service.html">Services</a></li>
-                                    <li class="dropdown"><a href="#">Pages</a>
-                                        <div class="dropdown-btn"><i class="fa fa-angle-down"></i></div></li>
                                     <li class="dropdown"><a href="products.html">Products</a>
                                         <div class="dropdown-btn"><i class="fa fa-angle-down"></i></div></li>
-                                    <li><a href="blog-grid.html">Blog</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
@@ -387,30 +606,6 @@
         <!-- End Main Header Section -->
         <!-- ========================================== -->
 
-        <!-- ========================================== -->
-        <!-- Start Hero Banner Section -->
-        <!-- ========================================== -->
-        <section class="hero-banner">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>The Best Import and Export <br>Services since 2020</h1>
-                        <p>Connecting global markets with reliable, efficient, and professional trading solutions worldwide.</p>
-                        <a href="contact.html" class="hero-btn">
-                            <i class="fa-solid fa-arrow-right"></i>
-                            Get A Quote
-                        </a>
-                    </div>
-                    <div class="hero-airplane">
-                        <i class="fa-solid fa-plane"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ========================================== -->
-        <!-- End Hero Banner Section -->
-        <!-- ========================================== -->
-
         <!-- Start Breadcrumb Section -->
         <!-- ========================================== -->
         <section class="page-title">
@@ -437,13 +632,13 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="service-block style-2 wow fadeInLeft">
                             <figure class="image overlay-anim">
-                                <img class="img-1" src="assets/images/service/service-1.jpg" alt>
+                                <img class="img-1" src="assets/images/service/service-1.png" alt>
                             </figure>
                             <div class="inner-box ">
                                 <div class="icon"><img src="assets/images/icons/gear.png" alt=""></div>
                                 <h4 class="title mt-0"><a href="service-details.html">International Business Consultants</a></h4>
                                 <div class="text">Expert guidance and strategic consulting for businesses looking to expand globally and navigate international markets successfully.</div>
-                                <a href="service-details.html" class="view-more"><span class="btn-title">View Details</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                                <a href="quote.html" class="view-more"><span class="btn-title">Get A Quote</span><i class="fa-solid fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -456,7 +651,7 @@
                                 <div class="icon"><img src="assets/images/icons/ship.png" alt=""></div>
                                 <h4 class="title mt-0"><a href="service-details.html">Exporter Services</a></h4>
                                 <div class="text">Comprehensive export solutions including documentation, logistics, customs clearance, and market entry strategies for global expansion.</div>
-                                <a href="service-details.html" class="view-more"><span class="btn-title">View Details</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                                <a href="quote.html" class="view-more"><span class="btn-title">Get A Quote</span><i class="fa-solid fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -469,7 +664,7 @@
                                 <div class="icon"><img src="assets/images/icons/plane.png" alt=""></div>
                                 <h4 class="title mt-0"><a href="service-details.html">Importer Services</a></h4>
                                 <div class="text">Professional import services with streamlined processes, customs handling, quality assurance, and supply chain management solutions.</div>
-                                <a href="service-details.html" class="view-more"><span class="btn-title">View Details</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                                <a href="quote.html" class="view-more"><span class="btn-title">Get A Quote</span><i class="fa-solid fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -478,8 +673,167 @@
         </section>
         <!-- ========================================== -->
         <!-- End Service Section -->
-    
-    
+
+        <!-- ========================================== -->
+        <!-- Start Supplier Contact Section -->
+        <!-- ========================================== -->
+        <section class="supplier-section space">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="supplier-content">
+                            <div class="sec-title">
+                                <span class="sub-title">PARTNERSHIP OPPORTUNITY</span>
+                                <h2>Suppliers Contact Us</h2>
+                                <div class="text">
+                                    We are always looking for reliable suppliers and business partners to expand our global network. 
+                                    Join our network of trusted suppliers and grow your business with us through international trade opportunities.
+                                </div>
+                            </div>
+                            
+                            <div class="supplier-features">
+                                <div class="feature-item">
+                                    <div class="icon"><i class="fa-solid fa-handshake"></i></div>
+                                    <div class="content">
+                                        <h4>Global Partnership</h4>
+                                        <p>Connect with international markets through our extensive network</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                                    <div class="content">
+                                        <h4>Business Growth</h4>
+                                        <p>Expand your reach and increase sales with our import/export expertise</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="icon"><i class="fa-solid fa-shield-alt"></i></div>
+                                    <div class="content">
+                                        <h4>Reliable Support</h4>
+                                        <p>Professional support throughout the entire trading process</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-12">
+                        <div class="supplier-form-container">
+                            <div class="supplier-form-header">
+                                <h3>Company or Local Supplier</h3>
+                                <p>Fill out the form below to join our supplier network</p>
+                            </div>
+                            
+                            <form id="supplier_form" class="supplier-form" action="https://formspree.io/f/mzbnjrnb" method="post">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="company_name">Company Name *</label>
+                                        <input type="text" id="company_name" name="company_name" placeholder="Your Company Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="supplier_name">Supplier Name *</label>
+                                        <input type="text" id="supplier_name" name="supplier_name" placeholder="Contact Person Name" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="supplier_email">Email *</label>
+                                        <input type="email" id="supplier_email" name="email" placeholder="your@email.com" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mobile_number">Mobile Number</label>
+                                        <input type="tel" id="mobile_number" name="mobile_number" placeholder="+1 234 567 8900">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="country">Country *</label>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select Country</option>
+                                        <option value="Afghanistan">Afghanistan</option>
+                                        <option value="Albania">Albania</option>
+                                        <option value="Algeria">Algeria</option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Austria">Austria</option>
+                                        <option value="Bangladesh">Bangladesh</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="Brazil">Brazil</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="China">China</option>
+                                        <option value="France">France</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="India">India</option>
+                                        <option value="Indonesia">Indonesia</option>
+                                        <option value="Italy">Italy</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="Malaysia">Malaysia</option>
+                                        <option value="Mexico">Mexico</option>
+                                        <option value="Netherlands">Netherlands</option>
+                                        <option value="Pakistan">Pakistan</option>
+                                        <option value="Philippines">Philippines</option>
+                                        <option value="Singapore">Singapore</option>
+                                        <option value="South Korea">South Korea</option>
+                                        <option value="Spain">Spain</option>
+                                        <option value="Sri Lanka">Sri Lanka</option>
+                                        <option value="Thailand">Thailand</option>
+                                        <option value="Turkey">Turkey</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="United States">United States</option>
+                                        <option value="Vietnam">Vietnam</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="full_address">Full Address *</label>
+                                    <textarea id="full_address" name="full_address" placeholder="Complete business address including city, state/province, postal code" rows="3" required></textarea>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="product_name">Product Name</label>
+                                        <input type="text" id="product_name" name="product_name" placeholder="Main product/service name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="product_category">Product Category</label>
+                                        <select id="product_category" name="product_category">
+                                            <option value="">Select Category</option>
+                                            <option value="General Trading Products">General Trading Products</option>
+                                            <option value="Agro Commodities">Agro Commodities</option>
+                                            <option value="FMCG Products">FMCG Products</option>
+                                            <option value="Machinery & Vehicles">Machinery & Vehicles</option>
+                                            <option value="Metals & Alloys">Metals & Alloys</option>
+                                            <option value="Textiles & Garments">Textiles & Garments</option>
+                                            <option value="Electronics">Electronics</option>
+                                            <option value="Chemicals">Chemicals</option>
+                                            <option value="Food & Beverages">Food & Beverages</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="product_details">Product Details</label>
+                                    <textarea id="product_details" name="product_details" placeholder="Describe your products, specifications, quality standards, production capacity, certifications, etc." rows="4"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button type="submit" class="supplier-submit-btn">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                        Submit Application
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- End Supplier Contact Section -->
+
         <!-- Start CTA Section -->
         <!-- ========================================== -->
         <section class="cta-section pt-50 pb-50">
@@ -497,7 +851,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-4">
                         <div class="cta_button text-right">
                             <div class="cta__btn">
-                                <a href="contact.html" class="theme-btn btn-style-2"><i class="icon fa-solid fa-arrow-right"></i><span class="btn-title">Get A Quote</span></a>
+                                <a href="quote.html" class="theme-btn btn-style-2"><i class="icon fa-solid fa-arrow-right"></i><span class="btn-title">Get A Quote</span></a>
                             </div>
                         </div>
                     </div>
@@ -515,9 +869,7 @@
         <footer class="main-footer pull-up">
             <div class="widgets-section space space-bottom-minimize-40">
                 <div class="bg bg-image" style="background-image: url(assets/images/background/footer-bg.jpg)"></div>
-                <div class="footer__shape-truck d-none d-xxl-block wow fadeInLeft">
-                    <img src="assets/images/footer/footer-left-truck.png" alt="">
-                </div>
+
                 <div class="container">
                     <div class="row">
                         <div class="footer-column col-xl-3 col-lg-3 col-md-6">
@@ -539,10 +891,9 @@
                                 <div class="widget-bar"></div>
                                 <div class="widget-content">
                                     <ul class="user-links two-column">
-                                        <li><a href="#">About Logitek</a></li>
+                                        <li><a href="#">About Impex-Zone</a></li>
                                         <li><a href="#">Meet the Team</a></li>
-                                        <li><a href="#">News & Media</a></li>
-                                        <li><a href="#">Our Projects</a></li>
+                                        <li><a href="#">Our Products</a></li>
                                         <li><a href="#">Contact Us</a></li>
                                     </ul>
                                 </div>
@@ -555,15 +906,6 @@
                                 <div class="widget-bar"></div>
                                 <div class="widget-content">
                                     <div class="outer clearfix">
-                                        <div class="recent-post-item">
-                                            <figure class="image">
-                                                <a href="#"><img src="assets/images/footer/galary-1.jpg" alt=""></a>
-                                            </figure>
-                                            <div class="recent-post-info">
-                                                <h4 class="title"><a href="#">Fast and Reliable Shipping Global Service</a></h4>
-                                                <span class="post-date">Jan 20, 2024</span>
-                                            </div>
-                                        </div>
                                         <div class="recent-post-item">
                                             <figure class="image">
                                                 <a href="#"><img src="assets/images/footer/galary-2.jpg" alt=""></a>
@@ -580,20 +922,9 @@
     
                         <div class="footer-column col-xl-3 col-lg-3 col-md-6">
                             <div class="footer-widget">
-                                <h5 class="widget-title">Newsletter</h5>
-                                <div class="widget-bar"></div>
                                 <div class="widget-content">
                                     <div class="subscribe-form">
-                                        <div class="text">Signup for our latest news & articles.</div>
-                                        <form class="subscribe" action="https://formspree.io/f/mzbnjrnb" method="post">
-                                            <div class="form-group">
-                                                <input type="email" name="email" class="email" value placeholder="Email Address" autocomplete="on" required>
-                                                <button type="submit" class="theme-btn"  data-loading-text="">
-                                                    <i class="far fa-paper-plane"></i>
-                                                    <span class="btn-title"></span>
-                                                </button>
-                                            </div>
-                                        </form>
+                                        <div class="text">Follow us On Social Media</div>
                                         
                                         <ul class="social-icon-one">
                                             <li><a href="#"><span class="fa-brands fa-square-facebook"></span></a></li>
@@ -612,14 +943,9 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="inner-container">
-                        <div class="copyright-text">©2024 - All Rights Reserved 
-                                <a href="https://themeforest.net/user/theme-vally">ThemeVally</a>
+                        <div class="copyright-text">©2025 - All Rights Reserved 
+                                <a href="https://impex-zone.com">Impex-Zone</a>
                             </div>
-                        <ul class="footer-nav">
-                            <li><a href="#">Terms & Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Legal</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
